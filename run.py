@@ -2,6 +2,8 @@ import json
 import plotly
 import pandas as pd
 import pickle
+import os 
+from flask import send_from_directory   
 
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
@@ -11,21 +13,10 @@ import re
 from flask import render_template, request, jsonify
 from plotly.graph_objs import Bar
 from sqlalchemy import create_engine
+from models.Utils import tokenize
 
 
 app = Flask(__name__)
-
-def tokenize(text):
-    text = re.sub(r"[^a-zA-Z0-9]", " ", text)
-    tokens = word_tokenize(text)
-    lemmatizer = WordNetLemmatizer()
-
-    clean_tokens = []
-    for tok in tokens:
-        clean_tok = lemmatizer.lemmatize(tok).lower().strip()
-        clean_tokens.append(clean_tok)
-
-    return clean_tokens
 
 # load data
 engine = create_engine('sqlite:///data/Disaster.db')
@@ -36,6 +27,11 @@ with open("models/Model.pkl", "rb") as file:
     model = pickle.load(file)
 
 # index webpage displays cool visuals and receives user input text for model
+
+@app.route('/favicon.ico') 
+def favicon(): 
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
 @app.route('/')
 @app.route('/index')
 def index():
@@ -120,6 +116,7 @@ def go():
 
 
 def main():
+
     app.run(host='0.0.0.0', port=3000, debug=True)
 
 

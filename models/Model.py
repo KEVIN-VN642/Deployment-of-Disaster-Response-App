@@ -16,6 +16,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.model_selection import GridSearchCV
 from sklearn.multioutput import MultiOutputClassifier
 import pickle
+from Utils import tokenize
 
 def load_data(database_filepath):
     engine = create_engine('sqlite:///'+database_filepath)
@@ -25,21 +26,6 @@ def load_data(database_filepath):
     category_names = y.columns
     return X, y, category_names 
 
-def tokenize(text):
-      #remove non-alphanumeric characters
-    text = re.sub(r"[^a-zA-Z0-9]", " ", text)
-    
-    tokens = word_tokenize(text)
-    lemmatizer = WordNetLemmatizer()
-
-    clean_tokens = []
-    for tok in tokens:
-        clean_tok = lemmatizer.lemmatize(tok).lower().strip()
-        clean_tokens.append(clean_tok)
-
-    return clean_tokens    
-
-
 def build_model():
     pipeline = Pipeline([
         ('vect', CountVectorizer(tokenizer=tokenize)),
@@ -48,7 +34,7 @@ def build_model():
     ])
     # parameters set to this due to reduce the size of pkl file, which were too large (840 MB) for uploading to github with my previous parameters.
     parameters = {
-        'clf__estimator__n_estimators': [10],
+        'clf__estimator__n_estimators': [6],
         'clf__estimator__min_samples_split': [2],
     
     }

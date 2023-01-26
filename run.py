@@ -4,6 +4,7 @@ import pandas as pd
 import pickle
 import os 
 from flask import send_from_directory   
+from models.Model import Preprocess
 
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
@@ -13,8 +14,6 @@ import re
 from flask import render_template, request, jsonify
 from plotly.graph_objs import Bar
 from sqlalchemy import create_engine
-from models.Utils import tokenize
-
 
 app = Flask(__name__)
 

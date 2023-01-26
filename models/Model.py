@@ -16,7 +16,37 @@ from sklearn.pipeline import Pipeline
 from sklearn.model_selection import GridSearchCV
 from sklearn.multioutput import MultiOutputClassifier
 import pickle
-from Utils import tokenize
+from sklearn.preprocessing import FunctionTransformer
+from sklearn.base import BaseEstimator, TransformerMixin
+#from Utils import tokenize
+
+class Preprocess(BaseEstimator, TransformerMixin):
+  
+    def __init__(self):
+        pass
+
+    def fit(self, X, y=None):
+        return self
+    
+    def transform(self, X, y=None):
+
+        def tokenize(text):
+            #remove non-alphanumeric characters
+            text = re.sub(r"[^a-zA-Z0-9]", " ", text)
+            
+            tokens = word_tokenize(text)
+            lemmatizer = WordNetLemmatizer()
+
+            clean_tokens = []
+            for tok in tokens:
+                clean_tok = lemmatizer.lemmatize(tok).lower().strip()
+                clean_tokens.append(clean_tok)
+
+            return ' '.join(clean_tokens)
+      
+
+        return pd.Series(X).apply(tokenize).values
+
 
 def load_data(database_filepath):
     engine = create_engine('sqlite:///'+database_filepath)
@@ -28,7 +58,8 @@ def load_data(database_filepath):
 
 def build_model():
     pipeline = Pipeline([
-        ('vect', CountVectorizer(tokenizer=tokenize)),
+        ('prep',Preprocess()),
+        ('vect', CountVectorizer()),
         ('tfidf', TfidfTransformer()),
         ('clf', MultiOutputClassifier(RandomForestClassifier()))
     ])

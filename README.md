@@ -27,5 +27,5 @@ Run following commands to set up data and model
     
 ### 5. Results and API:
 ##### Overview Page:
-![Home Page] ('Home page'.png)
+![Home Page] (https://github.com/KEVIN-VN642/Deployment-of-Disaster-Response-App/blob/main/Images/Home_page.png)
 

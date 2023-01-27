@@ -17,10 +17,10 @@ You can take a look at API of this project here: https://disaster--response.hero
 
 ## 4. How to run project locally
 Run following commands to set up data and model
-- Moving to data folder and run following command to clean data and then save in the database:
+- Moving to data folder and run following command to clean data and then save in the database:<br>
    python ETL_Process.py "disaster_messages.csv" "disaster_categories.csv" "Disaster.db"
-- Moving to models folder Run following command to train model and save model in pickle format
-   python Model.py "../data/Disaster.db" "Model.pkl"
+- Moving to models folder Run following command to train model and save model in pickle format: <br>
+   python Model.py "../data/Disaster.db" "Model.pkl": <br>
 - Moving to app folder and run following command to run the app locally:
    python run.py
     

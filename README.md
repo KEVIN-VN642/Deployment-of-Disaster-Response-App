@@ -25,4 +25,7 @@ Run following commands to set up data and model
     - Moving to app folder and run following command to run the app locally:
         python run.py
     
+### 5. Results and API:
+##### Overview Page:
+![Home Page] (https://github.com/KEVIN-VN642/Deployment-of-Disaster-Response-App/blob/main/Images/Home%20page.png)
 

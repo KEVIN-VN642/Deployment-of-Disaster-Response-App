@@ -20,9 +20,9 @@ Run following commands to set up data and model
 - Moving to data folder and run following command to clean data and then save in the database:
    python ETL_Process.py "disaster_messages.csv" "disaster_categories.csv" "Disaster.db"
 - Moving to models folder Run following command to train model and save model in pickle format
-        python Model.py "../data/Disaster.db" "Model.pkl"
+   python Model.py "../data/Disaster.db" "Model.pkl"
 - Moving to app folder and run following command to run the app locally:
-        python run.py
+   python run.py
     
 ## 5. Results and API:
 The results can be found from following url: https://disaster--response.herokuapp.com/

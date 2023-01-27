@@ -9,7 +9,7 @@ You can take a look at API of this project here: https://disaster--response.hero
  
  ## 3. Software requirements:
  You will need following packages:
- - Natural language processing tool kit package nltk
+ - Natural language processing tool kit package: nltk
  - Data processing packages: numpy, pandas
  - Machine learning: skicit-learn
  - Charts and web framework: plotly, Flask
@@ -26,6 +26,7 @@ Run following commands to set up data and model
         python run.py
     
 ## 5. Results and API:
+The results can be found from following url: https://disaster--response.herokuapp.com/
 #### 5.1 Home Page:
 ![Home Page](https://github.com/KEVIN-VN642/Deployment-of-Disaster-Response-App/blob/main/Images/Home%20page.png)
 *******************************************************************************************************************************

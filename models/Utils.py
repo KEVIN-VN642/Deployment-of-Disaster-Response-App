@@ -4,7 +4,10 @@ import re
 
 
 def tokenize(text):
-      #remove non-alphanumeric characters
+    """
+    This function remove non-alphanumeric characters then normalize and lemmatize words
+    to return a clean text
+    """
     text = re.sub(r"[^a-zA-Z0-9]", " ", text)
     
     tokens = word_tokenize(text)

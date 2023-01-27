@@ -1,9 +1,9 @@
 import json
 import plotly
 import pandas as pd
-import pickle
 import joblib
-import os 
+import os
+import sys 
 from flask import send_from_directory   
 
 from nltk.stem import WordNetLemmatizer
@@ -14,16 +14,18 @@ import re
 from flask import render_template, request, jsonify
 from plotly.graph_objs import Bar
 from sqlalchemy import create_engine
+sys.path.append('..')
+
 from models.Utils import tokenize
 
 app = Flask(__name__)
 
 # load data
-engine = create_engine('sqlite:///data/Disaster.db')
+engine = create_engine('sqlite:///../data/Disaster.db')
 df = pd.read_sql_table('Data', engine)
 
 # load model
-model = joblib.load('models/Model.pkl')
+model = joblib.load('../models/Model.pkl')
 
 # index webpage displays cool visuals and receives user input text for model
 
@@ -39,41 +41,52 @@ def index():
     # TODO: Below is an example - modify to extract data for your own visuals
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
+    genre_pct = round(100*genre_counts/genre_counts.sum(),2)
     
     # Percentage of messages falls in each category
     categories = df[df.columns[4:]]
-    pct_message = 100*categories.sum().sort_values()/categories.shape[0]
+    pct_message = round(100*categories.sum().sort_values()/categories.shape[0],2)
     categories_name = list(pct_message.index)
 
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
     graphs = [
         {
-            'data': [
-                Bar(
-                    x=genre_names,
-                    y=genre_counts
-                )
-            ],
-
-            'layout': {
-                'title': '<b>Distribution of Message Genres</b>',
-                'yaxis': {
-                    'title': "Count"
-                },
-                'xaxis': {
-                    'title': "Genre"
+            "data":[
+                {
+                    "type": "pie",
+                    "hole": 0.45,
+                    "name": "Genre",
+                    "pull": 0,
+                    "marker": {
+                        "colors":[
+                            "#85cc81",
+                            "#c293bc",
+                            "#c9c740"
+                        ]
+                    },
+                    "textinfo": "label+value",
+                    "hoverinfo": "all",
+                    "labels": genre_names,
+                    "values": genre_counts
                 }
+            ],
+            "layout": {
+                "title": "<b>Count and Percentage of Messages by Genre</b>"
             }
-        },
 
+        },
         # Category visualization
         {
             'data':[
-                Bar(
-                    x=categories_name,
-                    y=pct_message
-                )
+                {
+                    "type": "bar",
+                    "x": categories_name,
+                    "y": pct_message,
+                    "marker": {
+                        "color": "#1e96e6"
+                    }
+                }
             ],
             'layout':{
                 'title': '<b>Percentage of Messages in each category</b> <br> (Each message may fall in several categories)',
@@ -82,7 +95,10 @@ def index():
                 },
                 'xaxis': {
                     'title': 'Category',
-                    'tickangle': 25
+                    'tickangle': 30
+                },
+                "margin": {
+                    "b": 150
                 }
             }
         }

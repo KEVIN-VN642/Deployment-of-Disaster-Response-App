@@ -26,9 +26,9 @@ Run following commands to set up data and model
         python run.py
     
 ## 5. Results and API:
-#### Home Page:
+#### 5.1 Home Page:
 ![Home Page](https://github.com/KEVIN-VN642/Deployment-of-Disaster-Response-App/blob/main/Images/Home%20page.png)
 *******************************************************************************************************************************
-#### Data Dashboard:
+#### 5.2 Data Dashboard:
 ![Data Dashboard](https://github.com/KEVIN-VN642/Deployment-of-Disaster-Response-App/blob/main/Images/Dashboard.png)
 

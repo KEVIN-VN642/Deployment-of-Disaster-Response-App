@@ -2,6 +2,7 @@ import json
 import plotly
 import pandas as pd
 import pickle
+import joblib
 import os 
 from flask import send_from_directory   
 from models.Model import Preprocess
@@ -22,8 +23,7 @@ engine = create_engine('sqlite:///data/Disaster.db')
 df = pd.read_sql_table('Data', engine)
 
 # load model
-with open("models/Model.pkl", "rb") as file:
-    model = pickle.load(file)
+model = joblib.load('models/Model.pkl')
 
 # index webpage displays cool visuals and receives user input text for model
 

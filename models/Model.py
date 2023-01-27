@@ -18,6 +18,7 @@ from sklearn.multioutput import MultiOutputClassifier
 import pickle
 from sklearn.preprocessing import FunctionTransformer
 from sklearn.base import BaseEstimator, TransformerMixin
+import joblib
 #from Utils import tokenize
 
 class Preprocess(BaseEstimator, TransformerMixin):
@@ -28,7 +29,7 @@ class Preprocess(BaseEstimator, TransformerMixin):
     def fit(self, X, y=None):
         return self
     
-    def transform(self, X, y=None):
+    def transform(self, X):
 
         def tokenize(text):
             #remove non-alphanumeric characters
@@ -80,7 +81,7 @@ def evaluate_model(model, X_test, y_test):
 
 def save_model(model, model_filepath):
     with open(model_filepath, 'wb') as file:
-        pickle.dump(model, file)
+        joblib.dump(model, file)
 
 
 def main():

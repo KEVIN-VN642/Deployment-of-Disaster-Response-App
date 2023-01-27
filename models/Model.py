@@ -1,11 +1,12 @@
 import sys
+import re
+import numpy as np
+import pandas as pd
 
 from sqlalchemy import create_engine
 import nltk
 nltk.download(['punkt', 'wordnet'])
-import re
-import numpy as np
-import pandas as pd
+
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from sklearn.metrics import confusion_matrix, classification_report
@@ -15,12 +16,13 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import GridSearchCV
 from sklearn.multioutput import MultiOutputClassifier
+from Utils import tokenize
 import joblib
 
 def load_data(database_filepath):
     engine = create_engine('sqlite:///'+database_filepath)
     df = pd.read_sql_table('Data', engine)
-    X = df.message
+    X = df.message.apply(tokenize)
     y = df[df.columns[4:]]
     category_names = y.columns
     return X, y, category_names 
@@ -33,11 +35,11 @@ def build_model():
     ])
     # parameters set to this due to reduce the size of pkl file, which were too large (840 MB) for uploading to github with my previous parameters.
     parameters = {
-        'clf__estimator__n_estimators': [6],
+        'clf__estimator__n_estimators': [8],
         'clf__estimator__min_samples_split': [2],
     
     }
-    model = GridSearchCV(pipeline, param_grid=parameters, verbose=2, cv=3)
+    model = GridSearchCV(pipeline, param_grid=parameters, verbose=2, cv=4)
     return model
 
 

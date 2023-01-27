@@ -14,6 +14,7 @@ import re
 from flask import render_template, request, jsonify
 from plotly.graph_objs import Bar
 from sqlalchemy import create_engine
+from models.Utils import tokenize
 
 app = Flask(__name__)
 
@@ -99,10 +100,11 @@ def index():
 @app.route('/go')
 def go():
     # save user input in query
-    query = request.args.get('query', '') 
+    query = request.args.get('query', '')
+    clean_query = tokenize(query)
 
     # use model to predict classification for query
-    classification_labels = model.predict([query])[0]
+    classification_labels = model.predict([clean_query])[0]
     classification_results = dict(zip(df.columns[4:], classification_labels))
 
     # This will render the go.html Please see that file. 

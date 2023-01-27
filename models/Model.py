@@ -59,7 +59,6 @@ def load_data(database_filepath):
 
 def build_model():
     pipeline = Pipeline([
-        ('prep',Preprocess()),
         ('vect', CountVectorizer()),
         ('tfidf', TfidfTransformer()),
         ('clf', MultiOutputClassifier(RandomForestClassifier()))

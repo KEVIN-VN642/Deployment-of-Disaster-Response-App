@@ -5,7 +5,6 @@ import pickle
 import joblib
 import os 
 from flask import send_from_directory   
-from models.Model import Preprocess
 
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize

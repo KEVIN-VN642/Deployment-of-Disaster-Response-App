@@ -17,6 +17,8 @@ You can take a look at API of this project here: https://disaster--response.hero
 
 ## 4. How to run project locally
 Run following commands to set up data and model
+- Moving to data folder and run following command to clean data and then save in the database:
+   python ETL_Process.py
 
     - Moving to data folder and run following command to clean data and then save in the database
         python ETL_Process.py "disaster_messages.csv" "disaster_categories.csv" "Disaster.db"

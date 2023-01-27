@@ -100,7 +100,7 @@ def index():
                 "margin": {
                     "b": 150
                 },
-                "height": 600
+                "height": 500
             }
         }
     ]

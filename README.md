@@ -31,4 +31,7 @@ Run following commands to set up data and model
 *******************************************************************************************************************************
 #### 5.2 Data Dashboard:
 ![Data Dashboard](https://github.com/KEVIN-VN642/Deployment-of-Disaster-Response-App/blob/main/Images/Dashboard.png)
+*******************************************************************************************************************************
+#### 5.3 Classified Message:
+![Classified Message](https://github.com/KEVIN-VN642/Deployment-of-Disaster-Response-App/blob/main/Images/Classified%20message.png)
 

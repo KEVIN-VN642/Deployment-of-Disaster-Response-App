@@ -21,7 +21,7 @@ Run following commands to set up data and model
    python ETL_Process.py "disaster_messages.csv" "disaster_categories.csv" "Disaster.db"
 - Moving to models folder Run following command to train model and save model in pickle format: <br>
    python Model.py "../data/Disaster.db" "Model.pkl": <br>
-- Moving to app folder and run following command to run the app locally:
+- Moving to app folder and run following command to run the app locally: <br>
    python run.py
     
 ## 5. Results and API:

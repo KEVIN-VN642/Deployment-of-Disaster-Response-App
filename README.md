@@ -1,13 +1,13 @@
 # <a id="home">Disaster Response Project</a>
 
 ### Table of Contents
-1. [Introduction](#intro)
+1. [Introduction](#Intro)
 2. [Data](#data)
 3. [Software Requirements](#software)
 4. [How to run project locally](#run)
 5. [Results and API](#results)
 
-## 1. Introduction<a id='intro'></a>:
+## 1. Introduction<a id='Intro'></a>:
 
 It is often to have a lot of communications along a disaster either direct or via social media. It is essential to filter and then pull out the messages which are the most important. Different organizations are responsible for different parts of the problem, some will care about water, some care about electricity, another care about blocked roads...So the pulled out messages need to classify into several categories to ease the response's process. This project will build a machine learning pipeline and an API to assit emergency workers to classify message to send to appropriate disaster relief agency.
 

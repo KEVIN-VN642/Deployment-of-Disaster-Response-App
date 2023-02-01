@@ -2,7 +2,7 @@
 1. [Introduction](#intro)
 2. [Data](#data)
 3. [Software Requirements](#software)
-4. [How to run project locally](#Run_Local)
+4. [How to run project locally](#Run)
 5. [Results and API](#Results)
 
 ## 1. Introduction<a id='intro'></a>:
@@ -24,7 +24,7 @@ You can take a look at API of this project here: https://disaster--response.hero
  - Charts and web framework: plotly, Flask
  - Database: SQLite and Sqlalchemy
 
-## How to run project locally <a name = "Run_Local"></a>
+## 4. How to run project locally <a id = "Run"></a>
 
 Run following commands to set up data and model
 - Moving to data folder and run following command to clean data and then save in the database:<br>

@@ -1,5 +1,5 @@
 ### Table of Contents
-1. [Introduction](#Introduction)
+1. [Introduction](#1.-Introduction)
 2. [Data](#Data)
 3. [Software Requirements](#Software_Requirements)
 4. [How to run project locally](#Run_Local)

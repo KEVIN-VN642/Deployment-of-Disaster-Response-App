@@ -25,6 +25,8 @@ You can take a look at API of this project here: https://disaster--response.hero
  - Machine learning: skicit-learn
  - Charts and web framework: plotly, Flask
  - Database: SQLite and Sqlalchemy
+ 
+ [back](#home)
 
 ## 4. How to run project locally <a id = "run"></a>
 

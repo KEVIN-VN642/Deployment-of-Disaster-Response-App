@@ -34,7 +34,7 @@ Run following commands to set up data and model
 - Moving to app folder and run following command to run the app locally: <br>
    python run.py
     
-## Results and API <a name="results"></a>:
+## 5. Results and API <a name="results"></a>:
 
 The results can be found from following URL: https://disaster--response.herokuapp.com/
 #### 5.1 Home Page:

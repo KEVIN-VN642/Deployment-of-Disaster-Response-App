@@ -1,4 +1,4 @@
-# <a id="home">Home</a>
+# <a id="home">Disaster Response Project</a>
 
 ### Table of Contents
 1. [Introduction](#intro)

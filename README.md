@@ -1,11 +1,11 @@
 ### Table of Contents
-1. [Introduction](#First)
+1. [Introduction](#1)
 2. [Data](#Data)
 3. [Software Requirements](#Software_Requirements)
 4. [How to run project locally](#Run_Local)
 5. [Results and API](#Results)
 
-## <a name="First"></a> Introduction
+## Introduction<a id='1'></a>
 
 It is often to have a lot of communications along a disaster either direct or via social media. It is essential to filter and then pull out the messages which are the most important. Different organizations are responsible for different parts of the problem, some will care about water, some care about electricity, another care about blocked roads...So the pulled out messages need to classify into several categories to ease the response's process. This project will build a machine learning pipeline and an API to assit emergency workers to classify message to send to appropriate disaster relief agency.
 

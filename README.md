@@ -27,7 +27,7 @@ Run following commands to set up data and model
 ## 5. Results and API:
 The results can be found from following url: https://disaster--response.herokuapp.com/
 #### 5.1 Home Page:
-![Home Page](https://github.com/KEVIN-VN642/Deployment-of-Disaster-Response-App/blob/main/Images/Home%20page.png)
+![Home Page](https://github.com/KEVIN-VN642/Deployment-of-Disaster-Response-App/blob/main/Images/Home_page.png)
 *******************************************************************************************************************************
 #### 5.2 Data Dashboard:
 ![Data Dashboard](https://github.com/KEVIN-VN642/Deployment-of-Disaster-Response-App/blob/main/Images/Dashboard.png)

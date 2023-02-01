@@ -13,10 +13,14 @@ It is often to have a lot of communications along a disaster either direct or vi
 
 You can take a look at API of this project here: https://disaster--response.herokuapp.com/
 
+ [return home](#home)
+
 ## 2. Data <a id="data"></a>:
 
  Data for this project is get from Appen (formally Figure 8) which have real messages and message categories for training machine learning model.
  
+ [return home](#home)
+  
 ## 3. Software requirements <a id="software"></a>:
 
  You will need following packages:
@@ -26,7 +30,7 @@ You can take a look at API of this project here: https://disaster--response.hero
  - Charts and web framework: plotly, Flask
  - Database: SQLite and Sqlalchemy
  
- [back](#home)
+ [return home](#home)
 
 ## 4. How to run project locally <a id = "run"></a>
 
@@ -37,6 +41,8 @@ Run following commands to set up data and model
    python Model.py "../data/Disaster.db" "Model.pkl": <br>
 - Moving to app folder and run following command to run the app locally: <br>
    python run.py
+   
+[return home](#home)
     
 ## 5. Results and API <a name="results"></a>:
 
@@ -49,4 +55,6 @@ The results can be found from following URL: https://disaster--response.herokuap
 *******************************************************************************************************************************
 #### 5.3 Classified Message:
 ![Classified Message](https://github.com/KEVIN-VN642/Deployment-of-Disaster-Response-App/blob/main/Images/Classified%20message.png)
+
+ [return home](#home)
 

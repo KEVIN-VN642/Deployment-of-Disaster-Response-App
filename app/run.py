@@ -43,8 +43,9 @@ def index():
     genre_names = list(genre_counts.index)
     genre_pct = round(100*genre_counts/genre_counts.sum(),2)
     
-    # Percentage of messages falls in each category
+    # Percentage and number of messages falls in each category
     categories = df[df.columns[4:]]
+    category_counts = categories.sum().sort_values()
     pct_message = round(100*categories.sum().sort_values()/categories.shape[0],2)
     categories_name = list(pct_message.index)
 
@@ -76,7 +77,7 @@ def index():
             }
 
         },
-        # Category visualization
+        # Category visualization - percentage
         {
             'data':[
                 {
@@ -92,6 +93,33 @@ def index():
                 'title': '<b>Percentage of Messages in each category</b> <br> (Each message may fall in several categories)',
                 'yaxis': {
                     'title': "Percentage"
+                },
+                'xaxis': {
+                    'title': 'Category',
+                    'tickangle': 30
+                },
+                "margin": {
+                    "b": 150
+                },
+                "height": 500
+            }
+        },
+        # Category visualization - count
+        {
+            'data':[
+                {
+                    "type": "bar",
+                    "x": categories_name,
+                    "y": category_counts,
+                    "marker": {
+                        "color": "#1e96e6"
+                    }
+                }
+            ],
+            'layout':{
+                'title': '<b>Number of Messages in each category</b> <br> (Each message may fall in several categories)',
+                'yaxis': {
+                    'title': "Counts"
                 },
                 'xaxis': {
                     'title': 'Category',

@@ -13,7 +13,7 @@ You can take a look at API of this project here: https://disaster--response.hero
  - Data processing packages: numpy, pandas
  - Machine learning: skicit-learn
  - Charts and web framework: plotly, Flask
- - Database: 
+ - Database: SQLite and Sqlalchemy
 
 ## 4. How to run project locally
 Run following commands to set up data and model

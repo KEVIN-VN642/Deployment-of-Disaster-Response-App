@@ -1,7 +1,7 @@
 ### Table of Contents
 1. [Introduction](#intro)
 2. [Data](#data)
-3. [Software Requirements](#Software_Requirements)
+3. [Software Requirements](#software-requirements)
 4. [How to run project locally](#Run_Local)
 5. [Results and API](#Results)
 
@@ -15,7 +15,7 @@ You can take a look at API of this project here: https://disaster--response.hero
 
  Data for this project is get from Appen (formally Figure 8) which have real messages and message categories for training machine learning model.
  
-## 3. Software requirements <a id="Software_Requirements"></a>:
+## 3. Software requirements <a id="software requirements"></a>:
 
  You will need following packages:
  - Natural language processing tool kit package: nltk

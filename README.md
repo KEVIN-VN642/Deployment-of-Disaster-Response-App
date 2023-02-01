@@ -2,7 +2,7 @@
 1. [Introduction](#Introduction)
 2. [Data](#Data)
 3. [Software Requirements](#Software_Requirements)
-4. [How to run project locally](#"Run_Local")
+4. [How to run project locally](#Run_Local)
 5. [Results and API](#Results)
 
 ## 1. Introduction <a name = "Introduction"></a>:

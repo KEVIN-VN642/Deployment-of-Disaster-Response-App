@@ -15,7 +15,7 @@ You can take a look at API of this project here: https://disaster--response.hero
 
  Data for this project is get from Appen (formally Figure 8) which have real messages and message categories for training machine learning model.
  
-## Software requirements <a name="Software_Requirements"></a>:
+## 3. Software requirements <a id="Software_Requirements"></a>:
 
  You will need following packages:
  - Natural language processing tool kit package: nltk

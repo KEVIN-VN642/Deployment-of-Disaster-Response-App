@@ -1,4 +1,4 @@
-## Table of Contents
+### Table of Contents
 1. [Introduction](#Introduction)
 2. [Data](#Data)
 3. [Software Requirements](#Software_Requirements)

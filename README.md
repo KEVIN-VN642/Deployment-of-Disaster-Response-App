@@ -1,6 +1,6 @@
 ### Table of Contents
 1. [Introduction](#intro)
-2. [Data](#Data)
+2. [Data](#data)
 3. [Software Requirements](#Software_Requirements)
 4. [How to run project locally](#Run_Local)
 5. [Results and API](#Results)
@@ -11,7 +11,7 @@ It is often to have a lot of communications along a disaster either direct or vi
 
 You can take a look at API of this project here: https://disaster--response.herokuapp.com/
 
-## Data <a name="Data"></a>:
+## 2. Data <a id="data"></a>:
 
  Data for this project is get from Appen (formally Figure 8) which have real messages and message categories for training machine learning model.
  

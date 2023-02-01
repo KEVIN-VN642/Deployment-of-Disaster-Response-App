@@ -3,7 +3,7 @@
 2. [Data](#data)
 3. [Software Requirements](#software)
 4. [How to run project locally](#run)
-5. [Results and API](#Results)
+5. [Results and API](#results)
 
 ## 1. Introduction<a id='intro'></a>:
 
@@ -34,7 +34,7 @@ Run following commands to set up data and model
 - Moving to app folder and run following command to run the app locally: <br>
    python run.py
     
-## Results and API <a name="Results"></a>:
+## Results and API <a name="results"></a>:
 
 The results can be found from following URL: https://disaster--response.herokuapp.com/
 #### 5.1 Home Page:

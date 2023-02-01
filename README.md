@@ -25,7 +25,7 @@ Run following commands to set up data and model
    python run.py
     
 ## 5. Results and API:
-The results can be found from following url: https://disaster--response.herokuapp.com/
+The results can be found from following URL: https://disaster--response.herokuapp.com/
 #### 5.1 Home Page:
 ![Home Page](https://github.com/KEVIN-VN642/Deployment-of-Disaster-Response-App/blob/main/Images/Home_page.png)
 *******************************************************************************************************************************

@@ -12,9 +12,11 @@ It is often to have a lot of communications along a disaster either direct or vi
 You can take a look at API of this project here: https://disaster--response.herokuapp.com/
 
 ## Data <a name="Data"></a>:
+
  Data for this project is get from Appen (formally Figure 8) which have real messages and message categories for training machine learning model.
  
 ## Software requirements <a name="Software_Requirements"></a>:
+
  You will need following packages:
  - Natural language processing tool kit package: nltk
  - Data processing packages: numpy, pandas
@@ -23,6 +25,7 @@ You can take a look at API of this project here: https://disaster--response.hero
  - Database: SQLite and Sqlalchemy
 
 ## How to run project locally <a name = "Run_Local"></a>
+
 Run following commands to set up data and model
 - Moving to data folder and run following command to clean data and then save in the database:<br>
    python ETL_Process.py "disaster_messages.csv" "disaster_categories.csv" "Disaster.db"
@@ -32,6 +35,7 @@ Run following commands to set up data and model
    python run.py
     
 ## Results and API <a name="Results"></a>:
+
 The results can be found from following URL: https://disaster--response.herokuapp.com/
 #### 5.1 Home Page:
 ![Home Page](https://github.com/KEVIN-VN642/Deployment-of-Disaster-Response-App/blob/main/Images/Home_page.png)

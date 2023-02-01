@@ -1,4 +1,4 @@
-<a id="back" style = "text-align:center" >Home</a>
+<a id="back" align="center">Home</a>
 ### Table of Contents
 1. [Introduction](#intro)
 2. [Data](#data)

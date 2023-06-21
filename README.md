@@ -11,7 +11,7 @@
 
 It is often to have a lot of communications along a disaster either direct or via social media. It is essential to filter and then pull out the messages which are the most important. Different organizations are responsible for different parts of the problem, some will care about water, some care about electricity, another care about blocked roads...So the pulled out messages need to classify into several categories to ease the response's process. This project will build a machine learning pipeline and an API to assit emergency workers to classify message to send to appropriate disaster relief agency.
 
-Visit this URL https://disaster-response.azurewebsites.net/ and try with the model (it may run a bit slowly due to using free service).
+Visit this URL https://disaster-response.azurewebsites.net/ and try with the model (it might run slowly due to using free service).
 
  [return home](#home)
 
